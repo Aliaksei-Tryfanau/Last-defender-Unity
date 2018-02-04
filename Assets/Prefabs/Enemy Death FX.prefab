@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 198092987885705228}
   - component: {fileID: 199125705777763222}
   - component: {fileID: 82039254131286154}
+  - component: {fileID: 114256371704203816}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: Enemy Death FX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,6 +123,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114256371704203816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1464105338448508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8d233fc896e1a40b674aa405cb353d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198092987885705228
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -134,7 +146,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -182,7 +194,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -454463630
+  randomSeed: 539607466
   InitialModule:
     serializedVersion: 3
     enabled: 1
