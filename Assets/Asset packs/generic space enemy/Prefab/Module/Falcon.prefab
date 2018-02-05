@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114006207984643334}
   - component: {fileID: 114474169063512286}
   m_Layer: 0
-  m_Name: Ship_03
+  m_Name: Falcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   deathFX: {fileID: 1464105338448508, guid: 52abb8dfced865a478c0cce3d6b036d1, type: 2}
   parent: {fileID: 0}
   scorePerHit: 12
-  healthPoints: 100
+  hits: 10
 --- !u!114 &114474169063512286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,4 +113,4 @@ MonoBehaviour:
   deathFX: {fileID: 1464105338448508, guid: 52abb8dfced865a478c0cce3d6b036d1, type: 2}
   parent: {fileID: 0}
   scorePerHit: 12
-  healthPoints: 100
+  hits: 10
