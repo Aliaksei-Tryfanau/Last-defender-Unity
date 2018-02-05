@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4990607877152018}
   - component: {fileID: 33830965679388596}
   - component: {fileID: 23413581245250402}
+  - component: {fileID: 114006207984643334}
+  - component: {fileID: 114474169063512286}
   m_Layer: 0
   m_Name: Falcon
   m_TagString: Untagged
@@ -34,9 +36,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074994750746910}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: -0.7071068, w: 0}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: -23.55, y: -4.84, z: 227.7}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 20.000021, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,7 +84,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074994750746910}
   m_Mesh: {fileID: 4300002, guid: ec2ed6fafcc53c64ba923b9ef7d5749f, type: 3}
-<<<<<<< HEAD:Assets/Asset packs/generic space enemy/Prefab/Module/Falcon.prefab
 --- !u!114 &114006207984643334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,5 +114,3 @@ MonoBehaviour:
   parent: {fileID: 0}
   scorePerHit: 12
   hits: 10
-=======
->>>>>>> parent of e458db9... Before trimeline added:Assets/Asset packs/generic space enemy/Prefab/Module/Ship_03.prefab
