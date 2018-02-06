@@ -9,20 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1464105338448508}
+  m_RootGameObject: {fileID: 1653070364331330}
   m_IsPrefabParent: 1
---- !u!1 &1464105338448508
+--- !u!1 &1653070364331330
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4568590574580986}
-  - component: {fileID: 198092987885705228}
-  - component: {fileID: 199125705777763222}
-  - component: {fileID: 82039254131286154}
-  - component: {fileID: 114256371704203816}
+  - component: {fileID: 4693514093035736}
+  - component: {fileID: 198946037499076110}
+  - component: {fileID: 199137288836330016}
+  - component: {fileID: 82229193857867398}
+  - component: {fileID: 114513388776617666}
   m_Layer: 0
   m_Name: Enemy Death FX
   m_TagString: Untagged
@@ -30,31 +30,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4568590574580986
+--- !u!4 &4693514093035736
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1464105338448508}
+  m_GameObject: {fileID: 1653070364331330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.68385, y: -91.67184, z: 218.46588}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82039254131286154
+--- !u!82 &82229193857867398
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1464105338448508}
+  m_GameObject: {fileID: 1653070364331330}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3b7bf3d45a4ef7045a614caa3c56dbf8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 173eccdba54ad384385c101f5266dce5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.253
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -110,7 +110,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -123,23 +123,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114256371704203816
+--- !u!114 &114513388776617666
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1464105338448508}
+  m_GameObject: {fileID: 1653070364331330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b8d233fc896e1a40b674aa405cb353d, type: 3}
+  m_Script: {fileID: 11500000, guid: ff86ed52ee8ff4995b2bab8d422500bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!198 &198092987885705228
+--- !u!198 &198946037499076110
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1464105338448508}
+  m_GameObject: {fileID: 1653070364331330}
   serializedVersion: 5
   lengthInSec: 0.5
   simulationSpeed: 1
@@ -194,7 +194,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 539607466
+  randomSeed: 1482339546
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -243,7 +243,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 50
-      minScalar: 5
+      minScalar: 20
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -287,25 +287,25 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9852941, g: 0, b: 0, a: 1}
-        key1: {r: 0.9885813, g: 0.47042832, b: 0, a: 1}
-        key2: {r: 0.99364185, g: 0.96623105, b: 0, a: 0}
-        key3: {r: 0.97794116, g: 0.47667193, b: 0.021572253, a: 0}
-        key4: {r: 1, g: 0, b: 0, a: 0}
+        key0: {r: 1, g: 1, b: 1, a: 0.6784314}
+        key1: {r: 1, g: 0, b: 0, a: 0.75686276}
+        key2: {r: 1, g: 0.33369622, b: 0, a: 0.7254902}
+        key3: {r: 1, g: 0.6413793, b: 0, a: 0}
+        key4: {r: 1, g: 0.6, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 12722
-        ctime2: 23323
-        ctime3: 34117
+        ctime1: 2120
+        ctime2: 32382
+        ctime3: 47031
         ctime4: 65535
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
-        atime2: 0
+        atime1: 30840
+        atime2: 65535
         atime3: 0
         atime4: 0
         atime5: 0
@@ -313,7 +313,7 @@ ParticleSystem:
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 5
-        m_NumAlphaKeys: 2
+        m_NumAlphaKeys: 3
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -346,7 +346,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3451,13 +3451,13 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &199125705777763222
+--- !u!199 &199137288836330016
 ParticleSystemRenderer:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1464105338448508}
+  m_GameObject: {fileID: 1653070364331330}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

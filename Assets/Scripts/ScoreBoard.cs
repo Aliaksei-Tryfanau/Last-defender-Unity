@@ -3,23 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreBoard : MonoBehaviour {
-
-
+public class ScoreBoard : MonoBehaviour
+{
     int score;
     Text scoreText;
-        
-	void Start () {
-        scoreText = GetComponent<Text>();
-	}
 
-    private void Update()
+    // Use this for initialization
+    void Start()
     {
+        scoreText = GetComponent<Text>();
         scoreText.text = score.ToString();
     }
 
-    public void ScoreHit(int scorePerHit)
+    public void ScoreHit(int scoreIncrease)
     {
-        score += scorePerHit;
+        score = score + scoreIncrease;
+        scoreText.text = score.ToString();
     }
 }

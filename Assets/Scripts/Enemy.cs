@@ -8,19 +8,15 @@ public class Enemy : MonoBehaviour {
     [SerializeField] GameObject deathFX;
     [SerializeField] Transform parent;
     [SerializeField] int scorePerHit = 12;
-
-    [SerializeField] int hits = 10;
+    [SerializeField] int hits = 3;
 
     ScoreBoard scoreBoard;
 
-	void Start () {
-        AddNonTriggerBoxCollider();
-        scoreBoard = FindObjectOfType<ScoreBoard>();
-	}
-
-    private void AddNonTriggerBoxCollider()
+	// Use this for initialization
+	void Start ()
     {
         AddBoxCollider();
+        scoreBoard = FindObjectOfType<ScoreBoard>();
     }
 
     private void AddBoxCollider()
@@ -29,14 +25,20 @@ public class Enemy : MonoBehaviour {
         boxCollider.isTrigger = false;
     }
 
-    private void OnParticleCollision(GameObject other)
+    void OnParticleCollision(GameObject other)
     {
-        scoreBoard.ScoreHit(scorePerHit);
-        hits--;
-        if (hits <= 0)
+        ProcessHit();
+        if (hits <= 1)
         {
             KillEnemy();
         }
+    }
+
+    private void ProcessHit()
+    {
+        scoreBoard.ScoreHit(scorePerHit);
+        hits = hits - 1;
+        // todo consider hit FX
     }
 
     private void KillEnemy()

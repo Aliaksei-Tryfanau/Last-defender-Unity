@@ -9,31 +9,31 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1557657970727034}
+  m_RootGameObject: {fileID: 1193006919822338}
   m_IsPrefabParent: 1
---- !u!1 &1557657970727034
+--- !u!1 &1193006919822338
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4852828584173268}
-  - component: {fileID: 82741996852643388}
-  - component: {fileID: 114211970415500828}
+  - component: {fileID: 4183771892773048}
+  - component: {fileID: 82450863638571238}
+  - component: {fileID: 114254989653455002}
   m_Layer: 0
-  m_Name: Music player
+  m_Name: Music Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4852828584173268
+--- !u!4 &4183771892773048
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1557657970727034}
+  m_GameObject: {fileID: 1193006919822338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,18 +41,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82741996852643388
+--- !u!82 &82450863638571238
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1557657970727034}
+  m_GameObject: {fileID: 1193006919822338}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4a9ee32289ad23c499030eac4f287f78, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a2707cd5b70ce4f9182db566d4e8db41, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.26
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -121,14 +121,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114211970415500828
+--- !u!114 &114254989653455002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1557657970727034}
+  m_GameObject: {fileID: 1193006919822338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf25071a8537a3942af1120a26bb8902, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d83efe46074e47909522dbbdb890c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

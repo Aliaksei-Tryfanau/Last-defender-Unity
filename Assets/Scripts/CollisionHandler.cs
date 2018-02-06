@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; // ok as long as this is the only script that loads scenes
 
 public class CollisionHandler : MonoBehaviour {
 
     [Tooltip("In seconds")][SerializeField] float levelLoadDelay = 1f;
-    [Tooltip("FX prefab on player")] [SerializeField] GameObject deathFX;
+    [Tooltip("FX prefab on player")][SerializeField] GameObject deathFX;
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         StartDeathSequence();
         deathFX.SetActive(true);
@@ -18,10 +17,11 @@ public class CollisionHandler : MonoBehaviour {
 
     private void StartDeathSequence()
     {
-        SendMessage("OnPLayerDeath");
+        SendMessage("OnPlayerDeath");
+
     }
 
-    private void ReloadScene()
+    private void ReloadScene() // string referenced
     {
         SceneManager.LoadScene(1);
     }

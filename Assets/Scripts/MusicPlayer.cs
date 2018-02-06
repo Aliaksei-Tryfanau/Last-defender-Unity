@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicPlayer : MonoBehaviour
-{
+public class MusicPlayer : MonoBehaviour {
 
     private void Awake()
     {
-        int numMusicPlayer = FindObjectsOfType<MusicPlayer>().Length;
-        if (numMusicPlayer > 1)
+        int numMusicPlayers = FindObjectsOfType<MusicPlayer>().Length;
+        if (numMusicPlayers > 1)
         {
             Destroy(gameObject);
         }
@@ -17,5 +16,4 @@ public class MusicPlayer : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
 }

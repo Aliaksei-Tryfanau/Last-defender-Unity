@@ -4,48 +4,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
+
+    // todo work-out why sometimes slow on first play of scene
+
     [Header("General")]
-    [Tooltip("In ms^-1")]
-    [SerializeField]
-    float speed = 20f;
+    [Tooltip("In ms^-1")][SerializeField] float controlSpeed= 20f;
     [Tooltip("In m")] [SerializeField] float xRange = 5f;
     [Tooltip("In m")] [SerializeField] float yRange = 3f;
     [SerializeField] GameObject[] guns;
 
     [Header("Screen-position Based")]
-    [SerializeField]
-    float positionPitchFactor = -5f;
+    [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float positionYawFactor = 5f;
 
     [Header("Control-throw Based")]
-    [SerializeField]
-    float controlPitchFactor = -20f;
+    [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlRollFactor = -20f;
 
     float xThrow, yThrow;
-    bool isControlsEnabled = true;
+    bool isControlEnabled = true;
 
-    void Start()
-    {
-
-    }
-
-    void OnPLayerDeath()    // called by string reference
-    {
-        print("Controls frozen");
-        isControlsEnabled = false;
-    }
-
+    // Update is called once per frame
     void Update()
     {
-        if (isControlsEnabled)
+        if (isControlEnabled)
         {
             ProcessTranslation();
             ProcessRotation();
             ProcessFiring();
         }
+    }
+
+    void OnPlayerDeath() // called by string reference
+    {
+        isControlEnabled = false;
     }
 
     private void ProcessRotation()
@@ -66,8 +59,8 @@ public class PlayerController : MonoBehaviour
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
-        float xOffset = xThrow * speed * Time.deltaTime;
-        float yOffset = yThrow * speed * Time.deltaTime;
+        float xOffset = xThrow * controlSpeed * Time.deltaTime;
+        float yOffset = yThrow * controlSpeed * Time.deltaTime;
 
         float rawXPos = transform.localPosition.x + xOffset;
         float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
@@ -82,27 +75,20 @@ public class PlayerController : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButton("Fire"))
         {
-            ActivateGuns();
+            SetGunsActive(true);
         }
         else
         {
-            DeactivateGuns();
+            SetGunsActive(false);
         }
     }
 
-    private void ActivateGuns()
+    private void SetGunsActive(bool isActive)
     {
-        foreach (GameObject gun in guns)
+        foreach (GameObject gun in guns) // care may affect death FX
         {
-            gun.SetActive(true);
-        }
-    }
-
-    private void DeactivateGuns()
-    {
-        foreach (GameObject gun in guns)
-        {
-            gun.SetActive(false);
+            var emissionModule = gun.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
         }
     }
 }
